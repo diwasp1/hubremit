@@ -1,0 +1,1100 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.top-navbar {
+  width: 100%;
+  background: #f7f7f7;
+}
+
+.top-navbar .top-navbar-wrapper {
+  font-size: 12px;
+  width: 100%;
+  line-height: 30px;
+  color: #01a65a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.top-navbar .top-navbar-wrapper .first span {
+  margin-right: 15px;
+}
+
+.top-navbar .top-navbar-wrapper .first span i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.top-navbar .top-navbar-wrapper .second span {
+  margin-left: 15px;
+}
+
+.top-navbar .top-navbar-wrapper .second span i {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.center-navbar {
+  width: 100%;
+}
+
+.center-navbar .center-navbar-wrapper {
+  padding: 5px 0px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.center-navbar .center-navbar-wrapper .logo-container {
+  height: 80px;
+}
+
+.center-navbar .center-navbar-wrapper .logo-container img {
+  height: inherit;
+}
+
+.center-navbar .center-navbar-wrapper .new-form .br-dropdown {
+  position: relative;
+}
+
+.center-navbar .center-navbar-wrapper .new-form .br-dropdown .brBtn {
+  cursor: pointer;
+  font-size: 12px;
+  border: 1px solid #01a65a;
+  line-height: 30px;
+  padding: 0px 15px;
+  color: #01a65a;
+  margin-top: 25px;
+  border-radius: 30px;
+}
+
+.center-navbar .center-navbar-wrapper .new-form .br-dropdown .brBtn:hover {
+  background: #dffff0;
+}
+
+.center-navbar .center-navbar-wrapper .new-form .br-dropdown ul {
+  position: absolute;
+  padding: 5px 15px;
+  width: 100%;
+  border-radius: 10px;
+  display: none;
+  z-index: 9;
+  background: #f5f5f5;
+  line-height: 30px;
+}
+
+.center-navbar .center-navbar-wrapper .new-form .br-dropdown ul a {
+  font-size: 12px;
+  display: block;
+  color: #01a65a;
+}
+
+.center-navbar .center-navbar-wrapper .new-form .br-dropdown ul.active {
+  display: block;
+}
+
+.bottom-navbar {
+  width: 100%;
+  background: #01a65a;
+}
+
+.bottom-navbar .bottom-navbar-wrapper {
+  width: 100%;
+}
+
+.bottom-navbar .bottom-navbar-wrapper .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.bottom-navbar .bottom-navbar-wrapper .nav-links a {
+  line-height: 50px;
+  color: white;
+  padding: 0px 15px;
+  text-decoration: none;
+}
+
+.bottom-navbar .bottom-navbar-wrapper .nav-links a:hover {
+  background: #09844b;
+}
+
+@media (max-width: 768px) {
+  .center-navbar .center-navbar-wrapper .logo-container {
+    height: 60px;
+  }
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background: none;
+  color: #fff;
+  padding: 0px 15px;
+  line-height: 50px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #5a4933 !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  line-height: 50px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #5a4933;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #f1f1f1;
+  color: #5a4933;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 999;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #e5fff3;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav .br-dropdown .brBtn {
+  font-size: 18px;
+  padding: 8px 8px 8px 32px;
+  color: #5a4933;
+}
+
+.sidenav .br-dropdown ul {
+  display: none;
+  background: #cacaca;
+}
+
+.sidenav .br-dropdown ul li {
+  border-bottom: 1px solid gray;
+}
+
+.sidenav .br-dropdown ul li a {
+  font-size: 20px;
+}
+
+.sidenav .br-dropdown ul.active {
+  display: block;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #5a4933;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #5a4933;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar .nav-links {
+    display: none;
+  }
+  .navbar .open-nav {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    text-align: right;
+  }
+}
+
+.banner {
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .hero .hero-item {
+  z-index: 0;
+  height: inherit;
+}
+
+.banner .hero .hero-item img {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.banner .hero .hero-item::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #033503b8;
+}
+
+.banner .hero .hero-item .text-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  left: 25%;
+  width: 50%;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.banner .hero .hero-item .text-container .banner-title {
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+  line-height: 45px;
+  font-family: "Philosopher", sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.banner .hero .hero-item .text-container .subtitle {
+  font-size: 18px;
+  color: white;
+  font-family: "Philosopher", sans-serif;
+  text-align: center;
+}
+
+.banner .hero .hero-item .text-container .button-container {
+  margin-top: 30px;
+}
+
+.banner .hero .hero-item .text-container .button-container a {
+  padding: 10px 30px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+}
+
+.main-title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 60vh;
+  }
+  .banner .hero .hero-item .text-container {
+    left: 0px;
+    width: 100%;
+    right: 0px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 20px;
+  }
+  .banner .hero .hero-item .text-container .banner-title {
+    font-size: 35px;
+    text-align: center;
+  }
+  .banner .hero .hero-item .text-container .subtitle {
+    font-size: 16px;
+  }
+}
+
+.about-us-section {
+  background: #f5f7fb;
+  padding: 40px;
+}
+
+.about-us-section .about-us-name {
+  font-size: 20px;
+  color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.about-us-section .about-us-name span {
+  font-size: 42px;
+  font-weight: bolder;
+}
+
+.about-us-section .about-us-name .border-below-name {
+  background: green;
+  width: 50%;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-top: 8px;
+}
+
+.about-us-section .about-us-name .about-us-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0px;
+  margin: 20px 0px;
+  height: 140px;
+}
+
+.about-us-section .about-us-name .about-us-boxes .box-1 {
+  font-size: 15px;
+  font-weight: 600;
+  background: #e8e5e5;
+  width: 32%;
+  height: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-us-section .about-us-name .about-us-boxes .box-2 {
+  font-size: 15px;
+  font-weight: 600;
+  background: #99d243;
+  width: 32%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-us-section .about-us-name .about-us-boxes .box-3 {
+  background: #e8e5e5;
+  width: 32%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-us-section .about-us-name .about-us-boxes .box-3 button {
+  border-radius: 20px;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 12px;
+  color: green;
+  border: 2px solid green;
+}
+
+.about-us-section .about-us-name .about-us-boxes .box-3 a {
+  text-decoration: none;
+  color: green;
+}
+
+.about-us-section .about-us-description {
+  font-size: 14px;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .about-us-section .about-us-name {
+    font-size: 18px;
+  }
+  .about-us-section .about-us-name span {
+    font-size: 35px;
+  }
+}
+
+.our-moto {
+  background: #e6e7e8;
+  padding: 30px;
+}
+
+.our-moto .our-moto-content {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  font-size: 14px;
+}
+
+.our-moto .our-moto-content img {
+  height: 80px;
+}
+
+.our-moto .our-moto-content p {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.our-moto .our-moto-content .our-moto-text {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .our-moto .our-moto-content {
+    margin-bottom: 20px;
+  }
+}
+
+.our-members {
+  text-align: center;
+  padding-top: 90px;
+}
+
+.our-members span {
+  font-size: 30px;
+  font-weight: 900;
+  border-bottom: solid 2px black;
+}
+
+.our-members .our-members-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.our-members .our-members-content img {
+  width: 150px;
+  border-radius: 75px;
+  margin: 20px;
+}
+
+.org-structure {
+  background: #f5f7fb;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.org-structure p {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.enquiry {
+  background: #90c74a;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+.enquiry p {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.enquiry i {
+  color: white;
+  border: solid 2px white;
+  border-radius: 100px;
+  padding: 8px;
+}
+
+.president-section {
+  background: #f7f7f7;
+}
+
+.president-section .img-container {
+  margin-top: 60px;
+  max-height: 350px;
+  overflow: hidden;
+}
+
+.president-section .name {
+  text-align: center;
+}
+
+.president-section .text-container {
+  padding-top: 45px;
+}
+
+.president-section .text-container .description {
+  font-size: 14px;
+}
+
+.president-section .text-container .button-container {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.president-section .text-container .button-container a {
+  color: #01a65a;
+}
+
+.president-section .mobile-banner {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.loan-section {
+  padding: 60px 0px 75px 0px;
+  -webkit-box-shadow: 0px -10px 20px #d4d4d445;
+          box-shadow: 0px -10px 20px #d4d4d445;
+}
+
+.loan-section .main-title {
+  text-align: center;
+}
+
+.loan-section .loan-item {
+  margin: 0px -5px;
+  margin-top: 15px;
+  background: #f7f7f7;
+  -webkit-box-shadow: 0px 2px 3px #e0e0e0;
+          box-shadow: 0px 2px 3px #e0e0e0;
+  padding: 30px 15px;
+}
+
+.loan-section .loan-item .img-container {
+  height: 60px;
+  text-align: center;
+}
+
+.loan-section .loan-item .img-container img {
+  height: inherit;
+}
+
+.loan-section .loan-item .title {
+  line-height: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.saving-section {
+  padding: 60px 0px 75px 0px;
+  -webkit-box-shadow: 0px -10px 20px #d4d4d445;
+          box-shadow: 0px -10px 20px #d4d4d445;
+}
+
+.saving-section .main-title {
+  text-align: center;
+}
+
+.saving-section .saving-item {
+  margin: 0px -5px;
+  margin-top: 15px;
+  background: #f7f7f7;
+  -webkit-box-shadow: 0px 2px 3px #e0e0e0;
+          box-shadow: 0px 2px 3px #e0e0e0;
+  padding: 30px 15px;
+}
+
+.saving-section .saving-item .img-container {
+  height: 60px;
+  text-align: center;
+}
+
+.saving-section .saving-item .img-container img {
+  height: inherit;
+}
+
+.saving-section .saving-item .title {
+  line-height: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.association {
+  padding: 60px 0px;
+}
+
+.association .main-title {
+  text-align: center;
+}
+
+.association .association-slider .img-container {
+  margin: 10px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.association .association-slider .slick-next:before,
+.association .association-slider .slick-prev:before {
+  color: #01a65a;
+}
+
+.testimonial {
+  padding: 60px 0px;
+  background: #f7f7f7;
+}
+
+.testimonial .main-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial .testimonial-slider .item {
+  padding: 15px 0px;
+  margin: 10px;
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 4px 0px 2px 4px #c1bebe;
+          box-shadow: 0px 2px 4px 0px 2px 4px #c1bebe;
+}
+
+.testimonial .testimonial-slider .item .name {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0px 30px;
+}
+
+.testimonial .testimonial-slider .item .location {
+  font-size: 14px;
+  padding: 0px 30px;
+}
+
+.testimonial .testimonial-slider .item .description {
+  font-size: 13px;
+  padding: 0px 30px;
+}
+
+.testimonial .testimonial-slider .item .img-container {
+  margin: 15px auto;
+  height: 180px;
+  overflow: hidden;
+}
+
+.testimonial .testimonial-slider .slick-next:before,
+.testimonial .testimonial-slider .slick-prev:before {
+  color: #01a65a;
+}
+
+.inquiry {
+  background: #01a65a;
+  padding: 45px 0px;
+  font-size: 18px;
+  color: white;
+}
+
+.inquiry .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.inquiry i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .inquiry .title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+.footer {
+  padding-top: 30px;
+  background: #fefefe;
+  font-size: 14px;
+}
+
+.footer #important {
+  padding-top: 30px;
+}
+
+.footer #important li {
+  border-bottom: 1px solid black;
+  padding-bottom: 6px;
+}
+
+.footer .logo-container {
+  height: auto;
+}
+
+.footer .logo-container img {
+  height: 100px;
+}
+
+.footer .logo-container p {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.footer .logo-under-title {
+  font-size: 30px;
+  font-weight: 900;
+  padding-top: 15px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.footer ul a {
+  font-size: 14px;
+  color: black;
+  line-height: 30px;
+}
+
+.footer .book-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .book-us a {
+  display: block;
+  margin: 15px;
+}
+
+.footer .contact-us {
+  padding-top: 30px;
+}
+
+.footer .contact-us p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer .contact-us i {
+  font-size: 14px;
+}
+
+.footer .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer .social-links a {
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.footer .title {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Philosopher", sans-serif;
+}
+
+.footer .bottom-footer {
+  padding: 20px;
+  margin-top: 30px;
+  background: #e1e0e0;
+}
+
+.footer .bottom-footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .bottom-footer .footer-links a {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.footer .bottom-footer .copyright a {
+  color: #714c4c;
+}
+
+@media (max-width: 768px) {
+  .footer .logo-container {
+    text-align: center;
+  }
+  .footer .bottom-footer .container {
+    display: block;
+    font-size: 12px;
+  }
+}
+
+.page-banner {
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 0;
+}
+
+.page-banner .banner-title {
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+  margin-top: 90px;
+  text-align: center;
+  font-family: "Philosopher", sans-serif;
+  z-index: 1;
+}
+
+.page-banner .subtitle {
+  font-size: 20px;
+  color: white;
+  font-family: "Philosopher", sans-serif;
+  z-index: 1;
+}
+
+.page-banner::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00000096;
+}
+
+.gallery-page {
+  padding: 60px 0px 90px 0px;
+}
+
+.gallery-page .close {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.gallery-page .prev {
+  position: absolute;
+  top: 45%;
+  color: white;
+  font-size: 36px;
+  left: -45px;
+  cursor: pointer;
+}
+
+.gallery-page .next {
+  position: absolute;
+  top: 45%;
+  color: white;
+  font-size: 36px;
+  right: -45px;
+  cursor: pointer;
+}
+
+.gallery-page .mySlides img {
+  max-height: 80vh;
+}
+
+.gallery-page .modal {
+  background: #000000ba;
+}
+
+.gallery-page .filter-button-wrapper {
+  text-align: center;
+}
+
+.gallery-page .filter-button {
+  font-size: 18px;
+  text-align: center;
+  color: #292929;
+  padding: 5px 20px;
+  font-family: "Philosopher", sans-serif;
+  margin-bottom: 45px;
+}
+
+.gallery-page .filter-button:active,
+.gallery-page .filter-button:focus,
+.gallery-page .filter-button:hover {
+  background: #ecebeb;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.gallery-page .port-image {
+  width: 100%;
+}
+
+.gallery-page .gallery_product {
+  margin-bottom: 30px;
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-page .gallery_product img {
+  height: 180px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.gallery-page .gallery_product img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+/*# sourceMappingURL=style.css.map */
